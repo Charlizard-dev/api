@@ -1,0 +1,71 @@
+{
+  "name": "citymovers-backend",
+  "description": "CityMovers Backend API - MySQL/phpMyAdmin for cPanel",
+  "repository": "https://github.com/yourusername/swiftship-be",
+  "logo": "https://citymovers.com.ph/logo.png",
+  "keywords": ["node", "express", "mysql", "phpmyadmin", "api", "cpanel"],
+  "engines": {
+    "node": "18.x || 20.x"
+  },
+  "env": {
+    "DB_HOST": {
+      "description": "MySQL database host",
+      "value": "localhost",
+      "required": true
+    },
+    "DB_USER": {
+      "description": "MySQL database user",
+      "required": true
+    },
+    "DB_PASSWORD": {
+      "description": "MySQL database password",
+      "required": true
+    },
+    "DB_NAME": {
+      "description": "MySQL database name",
+      "required": true
+    },
+    "PORT": {
+      "description": "Port to run the server on",
+      "value": "5000"
+    },
+    "JWT_SECRET": {
+      "description": "Secret key for JWT tokens",
+      "required": true,
+      "generator": "secret"
+    },
+    "EMAIL_USER": {
+      "description": "Email address for sending emails",
+      "required": true
+    },
+    "EMAIL_PASS": {
+      "description": "Email app password",
+      "required": true
+    },
+    "STRIPE_SECRET_KEY": {
+      "description": "Stripe secret key",
+      "required": false
+    },
+    "STRIPE_PUBLISHABLE_KEY": {
+      "description": "Stripe publishable key",
+      "required": false
+    },
+    "LOCATIONIQ_API_KEY": {
+      "description": "LocationIQ API key",
+      "required": false
+    },
+    "PRODUCTION_FRONTEND_URL": {
+      "description": "Frontend URL for CORS",
+      "required": true
+    },
+    "NODE_OPTIONS": {
+      "description": "Node.js options for memory management",
+      "value": "--max-old-space-size=512 --no-wasm-code-gc",
+      "required": false
+    }
+  },
+  "scripts": {
+    "start": "node server.js"
+  }
+}
+
